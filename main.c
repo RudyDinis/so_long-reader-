@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rdinis <rdinis@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/06 16:09:39 by rdinis            #+#    #+#             */
+/*   Updated: 2025/12/06 16:10:07 by rdinis           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-    if (argc != 2)
-        return (write(1, "Error\nYou need one arg\n", 23));
-    map(argv[1]);
+	if (argc != 2)
+		return (write(1, "Error\nYou need one arg\n", 23));
+	map(argv[1]);
 }

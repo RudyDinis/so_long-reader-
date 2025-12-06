@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   map.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rdinis <rdinis@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/06 16:06:01 by rdinis            #+#    #+#             */
+/*   Updated: 2025/12/06 16:06:19 by rdinis           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "./so_long.h"
 
-int init_line(t_map *map, char *str)
+int	init_line(t_map *map, char *str)
 {
 	t_line	line;
 	t_cell	*cell;
@@ -12,9 +24,10 @@ int init_line(t_map *map, char *str)
 		cell->value = str[i];
 		cell->next;
 	}
-	return(0);
+	return (0);
 }
-int map(char *arg)
+
+int	map(char *arg)
 {
 	int		fd;
 	char	*line;
@@ -26,7 +39,7 @@ int map(char *arg)
 	{
 		line = get_next_line(fd);
 		if (line == NULL)
-			break;
+			break ;
 		init_map(map, line);
 		free(line);
 	}
